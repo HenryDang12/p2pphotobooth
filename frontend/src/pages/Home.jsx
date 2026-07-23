@@ -20,11 +20,14 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:4000/api/user/createUser", {
-        name,
-        phone,
-        email,
-      });
+const response = await axios.post(
+  "https://p2pphotobooth.onrender.com/api/user/createUser",
+  {
+    name,
+    phone,
+    email,
+  }
+);
 
       if (response.status === 201) {
         navigate("/CameraSwitcher");
