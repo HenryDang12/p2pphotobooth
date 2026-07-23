@@ -16,8 +16,11 @@ app.use(cors());
 app.use("/api/user", userRouter);
 
 // api endpoints
-app.get('/', (req, res) => {
-  res.status(200).send('Welcome to the backend server!');
+app.get("/", (req, res) => {
+  res.json({
+    status: "OK",
+    message: "Photobooth API is running 🚀"
+  });
 });
 
 // Start the server
